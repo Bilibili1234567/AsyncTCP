@@ -1,0 +1,19 @@
+# https://arduino.github.io/arduino-cli/0.35/sketch-project-file
+
+profiles:
+  client:
+    notes: code of the client part
+    fqbn: esp32:esp32:esp32da
+    platforms:
+      - platform: esp32:esp32 (2.0.14)
+        platform_index_url: https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+    libraries:
+      - ArduinoJson (6.21.3)
+      # https://github.com/dvarrel/AsyncTCP
+      # https://github.com/me-no-dev/ESPAsyncTCP/blob/master/examples/ClientServer/Client/Client.ino
+      - AsyncTCP (1.1.4)
+
+default_fqbn: esp32:esp32:esp32da
+default_port: /dev/cu.wchusbserial14340
+default_protocol: serial
+default_profile: client
